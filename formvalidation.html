@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Form Validations</title>
+    <style>
+      form {
+        font: 1em sans-serif;
+        max-width: 320px;
+      }
+      p > label {
+        display: block;
+     }
+      input[type="text"],
+      input[type="email"],
+      input[type="number"],
+      textarea,
+      fieldset {
+        width : 100%;
+        border: 1px solid #333;
+        box-sizing: border-box;
+      }
+      input:invalid {
+        box-shadow: 0 0 5px 1px red;
+      }
+      input:focus:invalid {
+        box-shadow: none;
+      }
+    </style>
+</head>
+<body>
+    <form>    
+        <label>Enter your Name</label>
+        <input type="text" min="6" max="10" required> 
+        <label for="t2">Enter your e-mail address</label>
+        <input type="email" id="t2" name="email">
+        <label for="n1">Enter your age</label>
+        <input type="number" min="21" max="30" id="n1" name="age" pattern="\d+">
+        <label for="t1">Select your course?</label>
+        <input type="text" id="t1" list="l1" required>
+        <datalist id="l1">
+            <option>HTML</option>
+            <option>CSS</option>
+            <option>JS</option>
+        </datalist>
+        <fieldset>  
+            <legend>Gender<abbr title="This field is mandatory" aria-label="required">*</abbr></legend>
+                <input type="radio" required name="driver" id="r1" value="yes"><label for="r1">Male</label>
+  
+                <input type="radio" required name="driver" id="r2" value="no"><label for="r2">Female</label>
+        </fieldset>
+        <label for="t3">Leave a short message</label>
+        <textarea id="t3" name="msg" maxlength="140" rows="5"></textarea>
+        <button>Submit</button>
+    </form>
+</body>
+</html>
