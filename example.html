@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FORMS ASSIGNMENT</title>
+<style>
+    input{
+        border-radius:4%;
+        color:black;
+        background-color: white;
+    }
+    body{
+        box-sizing: border-box;
+        background-color:transparent;
+       
+    }
+    form{
+        padding-left:41%;
+    }
+    label{
+        margin-bottom:30px;
+    }
+    .input input{
+        padding:10px;
+        margin:2% 0 2% 0;
+        padding-right:90px;
+    }
+    h2{
+        text-align:center;
+        padding:30px;
+    }
+    .gender{
+        font-size:15px;
+        padding:6px;
+    }
+    .choose{
+        font-size:18px;
+    }
+    select {
+        width: 120px;
+        margin: 15px 0 15px 0;
+        padding:6px;
+    }
+    .location select{
+        width:170px;
+        padding:9px;
+    }
+    .location select option{
+        padding:6px;
+    }
+    .day input{
+        padding:10px;
+    }
+    span{
+        color: red;
+        font-size: 13px;
+    }
+    input[type=submit]{
+        padding: 5px;
+        font-size: 15px;
+    }
+    input[type=file]{
+        padding: 5px;
+    }
+</style>
+</head>
+<body>
+    
+<h2 >FORMS </h2>
+<form>
+<div class="input">   
+  <label>First name:</label><br>
+  <input type="text" id=fname  placeholder="Enter your First name"required.><br>
+  <span id="fName"></span><br>
+  <label>Last name:</label><br>
+  <input type="text" id="lname" placeholder="Enter your Last Name" required>
+  <span></span><br>
+  <label>Email:</label><br>
+  <input type="Email" id="email" placeholder="Enter your Email" required><br>
+  <span></span>
+  <label>Mobile Number:</label><br>
+  <input type="tel" id="number" placeholder="Enter your Mobile Number" required><br>
+  <span></span><br>
+</div>
+<div class="genderr">
+ <h3>GENDER</h3>
+ <input type="radio" name="gender" > MALE<br>
+ <input type="radio" name="gender">FEMALE<br>
+ <input type="radio" name="gender">NONE<br>
+</div>
+<div>
+    <h3> Hobbies</h3>
+        <input type="checkbox"> HTML<br>
+        <input type="checkbox">CSS<br>
+        <input type="checkbox">JAVASCRIPT<br>
+        <input type="checkbox">PYTHON<br>
+        <input type="checkbox">PHP<br>
+        <input type="checkbox">MySQL<br>
+    </div>
+    <div class="choose">
+    <h3>Choose Your Stream</h3>
+    <select id="streamm" name="stream">
+        <option value="CSE">CSE</option>
+        <option value="ECE">ECE</option>
+        <option value="MECH">MECH</option>
+        <option value="CIVIL">CIVIL</option>
+    </select>
+    <br>
+    </div>
+<div class="location">
+    <h3>Locations</h3>
+    <select id="locations" >
+        <option>Chennai</option>
+        <option>Hyderabad</option>
+        <option>Bangalore</option>
+        <option>Kochi</option>
+        <option>Singapore</option>
+    </select><br><br></div>
+    <div class="day">
+    <h3>Select your Onboarding-date:</h3>
+    <input type="date"></div>
+    <h3> upload file</h3>
+    <input type="file" accept=""><br><br><br>
+    <input type="submit" onclick="validateform()">
+    <script>
+        function validateform(){
+            var x=document.getElementById("fname").value;
+            var y=document.getElementById("lname").value;
+            if (x==null || x==""){  
+                alert("Name can't be blank");  
+                return false;  
+                }                 
+        }
+       
+    </script>
+</form>
+    </body>
+</html>
+ 
