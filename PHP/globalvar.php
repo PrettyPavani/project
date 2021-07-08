@@ -1,4 +1,4 @@
-<?php  
+<?  
     $name = "Sharma";        //Global Variable  
     function global_var()  
     {  
@@ -10,3 +10,5 @@
     global_var();  
     echo "Variable outside the function: ". $name;  
 ?> 
+
+
